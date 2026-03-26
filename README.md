@@ -124,7 +124,7 @@ export default defineHook('agent_end', async (event, ctx) => {
 2. 执行`npm install -g openclaw@2026.3.24-beta.1`全局安装指定版本的OpenClaw
 3. 执行`openclaw init my-openclaw-workspace`初始化工作区
 4. 执行`cd my-openclaw-workspace && openclaw start`启动服务
-5. 访问`http://localhost:7890`验证部署成功
+5. 访问`http://localhost:18789`验证部署成功（OpenClaw默认网关端口为18789）
 #### 3.2.2 作业要求
 开发一个`agent_end` Hook，实现以下功能：
 1. 提取当前轮次的核心字段：会话ID、用户输入、Agent回复、时间戳、Token消耗
@@ -133,7 +133,7 @@ export default defineHook('agent_end', async (event, ctx) => {
 #### 3.2.3 NoSQL数据库选型推荐（适合初学者的轻量选项）
 | 数据库名称 | 特点 | 适用场景 | SDK安装方式 |
 | --- | --- | --- | --- |
-| **TinyDB** | 纯TypeScript/Python实现的嵌入式文档数据库，无需额外服务进程，直接以JSON文件存储，部署零成本 | 小型项目、学习场景、临时数据存储 | `npm install tinydb` |
+| **TinyDB** | 官方原生为纯Python实现的嵌入式文档数据库，无需额外服务进程，直接以JSON文件存储，部署零成本；Node.js/TypeScript版本为第三方独立实现，和Python版API不兼容 | 小型项目、学习场景、临时数据存储 | `npm install tinydb`（Node.js版） / `pip install tinydb`（Python版） |
 | **LevelDB** | 谷歌开源的键值对嵌入式数据库，性能极高，Node.js/Python都有成熟SDK，本地IO速度极快 | 本地开发场景、需要高性能读写的缓存场景 | `npm install level` |
 | **MongoDB Community** | 最流行的文档型NoSQL数据库，生态完善，支持Docker一键部署，JSON格式存储非常适合对话数据 | 后续需要扩展到生产环境、需要复杂查询的场景 | Docker一键启动：`docker run -d -p 27017:27017 mongo` |
 | **Redis** | 内存型键值数据库，性能极高，支持持久化，支持丰富的数据结构 | 需要快速读写的实时数据、缓存场景 | Docker一键启动：`docker run -d -p 6379:6379 redis` |

@@ -9,9 +9,12 @@ openclaw-hooks-nosql-practice/
 ├── SETUP.md                   # 示例运行指南
 ├── package.json               # 依赖声明
 └── examples/                  # 可直接运行的示例代码
-    ├── 01-agent-start-log.ts  # 示例1：Agent轮次开始日志Hook
-    ├── 02-agent-end-log.ts    # 示例2：Agent轮次结束日志Hook
-    └── 03-agent-end-persist.ts # 示例3：对话数据持久化到TinyDB
+    ├── 01-agent-start-log.ts  # 示例1：Agent轮次开始日志Hook（TS版本）
+    ├── 02-agent-end-log.ts    # 示例2：Agent轮次结束日志Hook（TS版本）
+    ├── 03-agent-end-persist.ts # 示例3：对话数据持久化到TinyDB（TS版本）
+    ├── 04-pure-js-message-prepend.js # 示例4：消息前置Hook（纯JS版本，零配置生效）
+    └── 05-pure-js-message-append-leveldb.js # 示例5：消息后置Hook + LevelDB NoSQL持久化（纯JS版本）
+└── PURE_JS_HOOK_GUIDE.md # 纯JS版本Hook开发指南，解决TS版本模块类型错误问题
 ```
 ## 🚀 快速开始
 直接克隆本项目，按照 [SETUP.md](./SETUP.md) 中的步骤配置，5分钟就能运行所有示例，无需自己手写代码。

@@ -1,0 +1,21 @@
+{
+  "name": "openclaw-hooks-nosql-practice",
+  "version": "1.0.0",
+  "description": "OpenClaw Hooks机制实战教程，包含可运行的Hook示例和NoSQL持久化实践",
+  "repository": "https://github.com/DevLearnHub/openclaw-hooks-nosql-practice",
+  "author": "DevLearnHub",
+  "license": "MIT",
+  "dependencies": {
+    "@openclaw/sdk": ">=2026.3.24-beta.1",
+    "tinydb": "^1.1.3",
+    "@types/node": "^22.0.0"
+  },
+  "keywords": [
+    "openclaw",
+    "hooks",
+    "aop",
+    "nosql",
+    "ai-agent",
+    "tutorial"
+  ]
+}
